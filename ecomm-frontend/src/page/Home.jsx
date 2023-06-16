@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { GrPrevious, GrNext } from "react-icons/Gr";
 import CardFeature from "../components/CardFeature";
 import Products from "../components/Products";
 import vegetables from "../assets/vegetables.jpg";
@@ -9,6 +8,7 @@ import eatables from "../assets/eatables-fastfood.jpg";
 import scooter from "../assets/scooter.gif";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
+import {AiFillCaretLeft, AiFillCaretRight} from "react-icons/ai"
 
 const Home = () => {
   const navigate = useNavigate();
@@ -95,13 +95,13 @@ const Home = () => {
                 onClick={preveProduct}
                 className="bg-slate-300 hover:bg-slate-400 text-lg  p-1 rounded"
               >
-                <GrPrevious />
+                <AiFillCaretLeft />
               </button>
               <button
                 onClick={nextProduct}
                 className="bg-slate-300 hover:bg-slate-400 text-lg p-1 rounded "
               >
-                <GrNext />
+                <AiFillCaretRight />
               </button>
             </div>
           </div>
